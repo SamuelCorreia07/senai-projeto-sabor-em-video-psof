@@ -1,0 +1,164 @@
+/* ================================== */
+/* CONFIGURAÇÃO GERAL (AUTENTICAÇÃO)  */
+/* ================================== */
+
+/* Importa a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variáveis de Cor (Copiadas do style.css para consistência) */
+:root {
+    --brand-primary: #E85D04;       /* Laranja principal (logo, links ativos) */
+    --bg-dark-accent: #6D2111;    /* Marrom/Vinho do banner de boas-vindas E auth-bg */
+    --bg-light: #F7F7FA;          /* Cinza bem claro do fundo principal */
+    --bg-white: #FFFFFF;          /* Branco (cards, sidebars, header) */
+    --text-dark: #212121;         /* Preto/Cinza escuro para textos */
+    --text-light: #FFFFFF;        /* Branco para textos em fundos escuros */
+    --text-gray: #8A8A8A;         /* Cinza para placeholders e links inativos */
+    --border-light: #EEEEEE;      /* Cor da borda sutil */
+    --border-dark: #DDDDDD;       /* Borda mais escura para inputs de auth */
+    --bg-dark-active: #333333;    /* Fundo do botão de filtro ativo */
+}
+
+/* Reset básico e Padrões do Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================================== */
+/* LAYOUT DA PÁGINA DE AUTENTICAÇÃO   */
+/* ================================== */
+
+.auth-container {
+    display: flex;
+    min-height: 100vh; /* Ocupa a altura total da tela */
+    width: 100%;
+}
+
+/* ================================== */
+/* LADO ESQUERDO (BRANDING/LOGO)    */
+/* ================================== */
+
+.auth-brand-side {
+    flex: 1; /* Ocupa 50% da largura */
+    background-color: var(--bg-dark-accent);
+    
+    /* Centraliza o conteúdo (logo/título) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estilo do texto da logo (baseado no protótipo) */
+    color: var(--text-light);
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 20px; /* Evita que o texto quebre em telas menores */
+    text-align: center;
+    /* A imagem da panela/play seria adicionada aqui via HTML/CSS */
+}
+
+
+/* ================================== */
+/* LADO DIREITO (FORMULÁRIO)        */
+/* ================================== */
+
+.auth-form-side {
+    flex: 1; /* Ocupa 50% da largura */
+    background-color: var(--bg-white);
+    
+    /* Centraliza o box do formulário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 380px; /* Largura máxima do formulário */
+}
+
+.form-box h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    letter-spacing: 1px; /* Para "LOGIN" / "CADASTRO" */
+}
+
+/* Estilo do formulário e seus elementos */
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre os inputs e o botão */
+}
+
+.input-group {
+    /* Opcional, caso queira adicionar labels no futuro */
+    width: 100%;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 16px 14px;
+    border: 1px solid var(--border-dark); /* Borda cinza clara */
+    border-radius: 4px; /* Leve arredondamento */
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.form-box input::placeholder {
+    color: var(--text-gray);
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-box input:focus {
+    outline: 2px solid var(--brand-primary);
+    border-color: transparent;
+}
+
+/* Botão de Submit */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--bg-dark-accent);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+/* Link inferior (ex: "Não tem uma conta?") */
+.auth-link {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+.auth-link a {
+    color: var(--text-dark); /* Cor mais escura para o link */
+    font-weight: 600;
+    text-decoration: underline;
+}

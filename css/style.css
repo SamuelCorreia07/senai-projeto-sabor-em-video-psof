@@ -1,0 +1,675 @@
+/* ================================== */
+/* CONFIGURAÇÃO GERAL        */
+/* ================================== */
+
+/* Importa a fonte do Google Fonts (opcional, mas recomendado para o visual) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variáveis de Cor (Paleta) */
+:root {
+    --brand-primary: #E85D04;       /* Laranja principal (logo, links ativos) */
+    --bg-dark-accent: #6D2111;    /* Marrom/Vinho do banner de boas-vindas */
+    --bg-light: #F7F7FA;          /* Cinza bem claro do fundo principal */
+    --bg-white: #FFFFFF;          /* Branco (cards, sidebars, header) */
+    --text-dark: #212121;         /* Preto/Cinza escuro para textos */
+    --text-light: #FFFFFF;        /* Branco para textos em fundos escuros */
+    --text-gray: #8A8A8A;         /* Cinza para placeholders e links inativos */
+    --border-light: #EEEEEE;      /* Cor da borda sutil */
+    --bg-dark-active: #333333;    /* Fundo do botão de filtro ativo */
+}
+
+/* Reset básico e Padrões do Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================================== */
+/* LAYOUT PRINCIPAL          */
+/* ================================== */
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ================================== */
+/* NAVEGAÇÃO (LADO ESQUERDO)     */
+/* ================================== */
+.sidebar-nav {
+    flex-basis: 250px; /* Largura da barra de navegação */
+    flex-shrink: 0;
+    background-color: var(--bg-white);
+    padding: 24px;
+    height: 100vh;
+    position: sticky; /* Fica presa na rolagem */
+    top: 0;
+    border-right: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--brand-primary);
+    margin-bottom: 20px;
+    /* Adicionar ícone da panela aqui se desejar */
+}
+
+.sidebar-nav .menu-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-top: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço para ícones */
+    color: var(--text-gray);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav-menu li a:hover {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.nav-menu li a.active {
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+}
+
+/* ================================== */
+/* WRAPPER PRINCIPAL (Dir.)      */
+/* ================================== */
+.main-wrapper {
+    flex: 1; /* Ocupa todo o resto do espaço */
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER (Barra de pesquisa e perfil) */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.main-header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 30px;
+    padding: 0 15px;
+    width: 350px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.search-bar button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    /* Adicionar ícone de busca aqui */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+}
+
+.user-profile .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ÁREA DE CONTEÚDO (Centro e Direita) */
+.content-area {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    flex: 1; /* Ocupa o espaço restante abaixo do header */
+}
+
+/* ================================== */
+/* CONTEÚDO CENTRAL (Main)     */
+/* ================================== */
+main {
+    flex: 3; /* Ocupa 3/4 do espaço (ou 3 partes) */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Banner de Boas-Vindas */
+.welcome-banner {
+    background-color: var(--bg-dark-accent);
+    color: var(--text-light);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.welcome-banner h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.welcome-banner p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+
+.welcome-banner .btn-primary {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.welcome-banner .btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Seção de Receitas */
+.recipes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipes-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.recipe-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: var(--bg-light);
+}
+
+.filter-btn.active {
+    background-color: var(--bg-dark-active);
+    color: var(--text-light);
+    border-color: var(--bg-dark-active);
+}
+
+/* Grid de Receitas */
+.recipe-grid {
+    display: grid;
+    /* Cria colunas responsivas: auto-fit tenta encaixar o máximo de colunas
+       com no mínimo 250px e no máximo 1 fração do espaço */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem não saia do radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.recipe-card .card-info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    /* Evita que o texto quebre em muitas linhas */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.card-info .likes {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Adicionar ícone de like aqui */
+}
+
+/* ================================== */
+/* BARRA LATERAL (LADO DIREITO)   */
+/* ================================== */
+.right-sidebar {
+    flex: 1; /* Ocupa 1/4 do espaço (ou 1 parte) */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-widget {
+    background-color: var(--bg-white);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sidebar-widget h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.widget-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.widget-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.widget-list li a:hover {
+    color: var(--brand-primary);
+}
+
+.widget-list li img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 8px; /* Borda levemente arredondada para 'Últimos' */
+}
+
+/* Estilo específico para fotos de perfil dos chefs */
+.chefs-list li img.profile-pic {
+    border-radius: 50%; /* Borda redonda para chefs */
+}
+
+/* ================================== */
+/* ESTILOS DA PÁGINA DE REPRODUÇÃO    */
+/* ================================== */
+
+/* --- Overrides do Tema Escuro --- */
+
+/* Usamos a classe .video-page-layout que colocamos no <div> principal
+  do 'reproducao.html' para aplicar o fundo escuro.
+*/
+.video-page-layout {
+    background-color: var(--bg-dark-accent);
+    color: var(--text-light); /* Texto padrão passa a ser claro */
+}
+
+/* Deixa a barra de navegação esquerda escura */
+.video-page-layout .sidebar-nav {
+    background-color: var(--bg-dark-accent);
+    border-right-color: var(--bg-dark-accent); /* Remove a borda visível */
+    color: var(--text-light);
+}
+
+.video-page-layout .sidebar-nav .logo {
+    color: var(--text-light); /* Logo fica branca */
+}
+
+.video-page-layout .sidebar-nav .menu-title {
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+.video-page-layout .sidebar-nav .nav-menu li a {
+    color: var(--text-light);
+    opacity: 0.9;
+}
+
+/* Ajusta o hover para fundos escuros */
+.video-page-layout .sidebar-nav .nav-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+
+/* O link ativo continua laranja */
+.video-page-layout .sidebar-nav .nav-menu li a.active {
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+    opacity: 1;
+}
+
+/* Ajustes no Header da página de vídeo */
+.video-page-layout .main-header {
+    background-color: var(--bg-dark-accent);
+    border-bottom: none; /* Sem borda no protótipo */
+    justify-content: center; /* Centraliza a barra de busca */
+}
+
+/* Esconde o H1 e o Perfil que existem no index.html */
+.video-page-layout .main-header h1,
+.video-page-layout .main-header .user-profile {
+    display: none;
+}
+
+/* Barra de busca fica com fundo branco */
+.video-page-layout .main-header .search-bar {
+    background-color: var(--bg-white);
+    border-radius: 30px; /* Mais arredondado que o do index */
+    width: 450px;
+}
+
+/* A barra lateral direita continua branca, como no protótipo */
+.video-page-layout .right-sidebar .sidebar-widget {
+    background-color: var(--bg-white);
+    color: var(--text-dark); /* Texto volta a ser escuro dentro dela */
+}
+
+
+/* --- Estilos dos Novos Componentes (Player, Detalhes, Comentários) --- */
+
+.video-player-container {
+    width: 100%;
+    background-color: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    /* Proporção 16:9 para o player */
+    padding-top: 56.25%; 
+}
+
+/* Estilos para o <iframe> do YouTube quando você adicionar */
+.video-player-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Placeholder (pode remover depois) */
+.video-player-container .video-embed-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* --- Detalhes do Vídeo --- */
+.video-details {
+    margin-top: 20px;
+    color: var(--text-light);
+}
+
+.video-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.video-description-toggle {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.video-stats-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    color: var(--text-gray);
+}
+
+.video-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Seção de Comentários --- */
+.comments-section {
+    margin-top: 30px;
+    color: var(--text-light);
+}
+
+.comments-section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.comment-input-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 12px 20px;
+    color: var(--text-gray);
+    cursor: text;
+    margin-bottom: 20px;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.comment strong {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* --- Estilos da Barra de Recomendação (Direita) --- */
+
+/* O widget de recomendação é diferente do 'Últimos recebidos' 
+  do index.html, então criamos um novo estilo para ele.
+*/
+.recommendation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recommendation-card {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start; /* Alinha pelo topo */
+}
+
+.recommendation-card:hover h4 {
+    color: var(--brand-primary);
+}
+
+.recommendation-card .card-thumbnail {
+    flex-shrink: 0;
+    width: 150px; /* Largura fixa para thumbnail */
+    height: 84px; /* Altura 16:9 */
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendation-card .card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-light);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.recommendation-card .card-info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.4;
+    transition: color 0.2s ease;
+}
+
+.video-content-white-bg {
+    background-color: var(--bg-white);
+    color: var(--text-dark); /* Texto padrão volta a ser escuro */
+    border-radius: 15px; /* Arredondamento para combinar com o player */
+    padding: 24px;
+    /* O 'gap: 30px' do <main> vai criar o espaço acima deste bloco */
+}
+
+/* Sobrescreve a cor do texto e remove a margem de cima */
+.video-page-layout .video-details {
+    margin-top: 0;
+    color: var(--text-dark); 
+}
+
+/* Muda o 'action-btn' (Like) para um tema claro */
+.video-content-white-bg .action-btn {
+    background-color: var(--bg-light); /* Fundo cinza claro */
+    color: var(--text-dark); /* Texto escuro */
+}
+
+.video-content-white-bg .action-btn:hover {background-color: var(--border-light);} /* Cinza um pouco mais escuro no hover */
+
+
+/* Ajusta a seção de comentários */
+.video-page-layout .comments-section {color: var(--text-dark);} /* Garante que o texto seja escuro */
+
+
+/* Muda a cor do H2 dos comentários */
+.video-content-white-bg .comments-section h2 {color: var(--text-dark);}
+
+/* Muda a caixa de 'Adicionar comentário' */
+.video-content-white-bg .comment-input-box {
+    background-color: var(--bg-light);
+    color: var(--text-gray);
+    border: 1px solid var(--border-light); /* Adiciona uma borda sutil */
+}
+
+/* Garante que o texto do comentário seja legível */
+.video-content-white-bg .comment {color: var(--text-dark);}
+
+.video-content-white-bg .comment strong {color: var(--text-gray);}
