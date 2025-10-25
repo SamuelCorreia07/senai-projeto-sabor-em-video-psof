@@ -23,43 +23,90 @@
 // ==========================================================
 const db_recipes = [
     // Doces
-    { id: 1, title: 'Brigadeiro de colher', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 2, title: 'Bolo de cenoura', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 3, title: 'Pudim de Leite', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 4, title: 'Mousse de Maracujá', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 5, title: 'Torta de Limão', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 6, title: 'Cookies com Gotas', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 7, title: 'Palha Italiana', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 8, title: 'Cheesecake', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 9, title: 'Brownie', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    { id: 10, title: 'Banoffee', type: 'Doces', img: 'https://via.placeholder.com/300x180' },
-    
+    { id: 1, title: 'Brigadeiro', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'obL3IPdZKTo?si=tvYtxfWeFoGzyPfA', chefId: 1 },
+    { id: 2, title: 'Bolo de cenoura', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'DjHPC-dEd8o?si=0411tZztLU4i_tkO', chefId: 4 },
+    { id: 3, title: 'Pudim de Leite Condensado', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'olw3gMc4YlU?si=DGkN1YguqprEzjBc', chefId: 4 },
+    { id: 4, title: 'Mousse de Maracujá', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'tKCvDIXp6FI?si=WxxpPm2HDk6Gjig_', chefId: 4 },
+    { id: 5, title: 'Torta de Limão', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'P3kCnRQNqYs?si=ItmVFQhg04KMnliY', chefId: 4 },
+    { id: 6, title: 'Pudim de Iogurte', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'G8DMqk2HGAI?si=piEzaqnHWVVJe_Fd', chefId: 6 },
+    { id: 7, title: 'Sorvete de Pé de Moleque', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'Y2tw-DozZHY?si=1RVbJY9MJoT31WFX', chefId: 6 },
+    { id: 8, title: 'Pavê de Morango', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'HD7MK80XtPk?si=pfNxlSf5w20PCzwU', chefId: 1 },
+    { id: 9, title: 'Palha Italiana', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'JSfHpJq0i0w?si=ddsSn85p15ojH_fd', chefId: 6 },
+    { id: 10, title: 'Flan de Goiaba', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'PWO7IU8AoT4?si=aKEzD5zdlGaBAXNe', chefId: 1 },
+
     // Salgados
-    { id: 11, title: 'Espaguete à carbonara', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 12, title: 'Coxinha de Frango', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 13, title: 'Pão de Queijo', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 14, title: 'Lasanha Bolonhesa', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 15, title: 'Risoto de Camarão', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 16, title: 'Empadão de Frango', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 17, title: 'Quiche Lorraine', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 18, title: 'Feijoada', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 19, title: 'Pizza Margherita', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
-    { id: 20, title: 'Cuzcuz de milho', type: 'Salgados', img: 'https://via.placeholder.com/300x180' },
+    { id: 11, title: 'Macarrão à carbonara', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'pgh38V5EAm4?si=mTPA8yz_S-CEZwel', chefId: 5 },
+    { id: 12, title: 'Coxinha de Frango', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '5u6f4Da-1Tg?si=z4wVtUJge4xYgm40', chefId: 1 },
+    { id: 13, title: 'Pão de Queijo', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'E9FF2-ch1tc?si=2hzLxngh17wBb7JJ', chefId: 3 },
+    { id: 14, title: 'Lasanha Bolonhesa', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '-9Wp7NfeTBY?si=mN9ulE0POJ8PM5FW', chefId: 3 },
+    { id: 15, title: 'Muffins Salgados', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '5eqkrniYVFI?si=_uv7LGzmqTAMpLbY', chefId: 3 },
+    { id: 16, title: 'Empadinhas', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'gtVWZ9p826Q?si=HcQt5D5uexL3jiz2', chefId: 3 },
+    { id: 17, title: 'Provolone Assado', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '6fRg6xOfEKo?si=KWyPSWuv-9ErDI6z', chefId: 3 },
+    { id: 18, title: 'Enroladinho de Presunto e Queijo', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '3u68zcpUClQ?si=Dlu-TCl9iBxPeKLs', chefId: 3 },
+    { id: 19, title: 'Pizza Enrolada', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'qrAjFa5Cw_4?si=gFwIuk5EcbbPu-9K', chefId: 3 },
+    { id: 20, title: 'Cuzcuz de milho', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 't3i9AVYlHq8?si=FtJ3lPmkPnhRv_VT', chefId: 2 },
 
     // Vegano
-    { id: 21, title: 'Moqueca de Banana', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 22, title: 'Strogonoff de Palmito', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 23, title: '"Queijo" de Castanha', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 24, title: 'Hambúrguer de Grão de Bico', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 25, title: 'Torta Vegana de "Frango"', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 26, title: 'Falafel Assado', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 27, title: 'Guacamole', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 28, title: 'Feijão Tropeiro Vegano', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 29, title: 'Bolo Vegano de Chocolate', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    { id: 30, title: 'Curry de Legumes', type: 'Vegano', img: 'https://via.placeholder.com/300x180' },
-    
-    // (Adicione mais 10 'Saudável' e 10 'Pratos' seguindo o modelo)
+    { id: 21, title: 'Moqueca de Banana-da-Terra', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'OAqPkYoi00s?si=_NMEXs8SLJ47dJDE', chefId: 5 },
+    { id: 22, title: 'Strogonoff de Cogumelos com Palmito', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'Hih9D7zOIKs?si=ca0aGey9PNT534ww', chefId: 4 },
+    { id: 23, title: '"Queijo" de Castanha', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'HPj4ECyvC1I?si=r4fZpbN1HneJNbu7', chefId: 5 },
+    { id: 24, title: 'Hambúrguer de Grão de Bico', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'v30rGNce7iw?si=MjhBYJiWr7PoS5gt', chefId: 4 },
+    { id: 25, title: 'Torta Salgada Vegana', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'VvpdFEqdaZs?si=8cphwctGfoT-xjnH', chefId: 4 },
+    { id: 26, title: 'Humus e Falafel', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'NyPJ99kllMU?si=KC9OijM9nfWBf_xr', chefId: 4 },
+    { id: 27, title: 'Guacamole', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'N49ag-DmpA0?si=xLzd5Q3vekLrzNkV', chefId: 5 },
+    { id: 28, title: 'Feijão Tropeiro Vegano', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'RTnFCrKpHjI?si=7gIuNb4WJFCYNehM', chefId: 5 },
+    { id: 29, title: 'Bolo Vegano de Chocolate', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'Qw7oh2gkR_k?si=B6Wj3v3tpL70-LjY', chefId: 4 },
+    { id: 30, title: 'Curry de Legumes', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: '_bLFOLYZ1i8?si=c7Q6kIA703bobh7R', chefId: 5 },
+
+    // Saudável
+    { id: 31, title: 'Salada de Quinoa', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: '5np4Qc4ZQhc?si=xQduHGMhwDX25YYX', chefId: 4 },
+    { id: 32, title: 'Salada de Batata', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'xe7J8tBMkvk?si=orgqkk9r6LBYYpcl', chefId: 4 },
+    { id: 33, title: 'Peito de Frango Grelhado', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'yurBZw-_1ws?si=02mbijCekTw0x-mM', chefId: 5 },
+    { id: 34, title: 'Wrap Integral', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'YaT9hXICIR8?si=n126QmqR63QOn5AX', chefId: 4 },
+    { id: 35, title: 'Sopa Detox', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'OB1affOJDPc?si=dIsSlSRhDWrceA_j', chefId: 4 },
+    { id: 36, title: 'Iogurte com Granola', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'lrpCST_wu_c?si=1NRd_cyvzyjc3d6I', chefId: 5 },
+    { id: 37, title: 'Omelete Suflê', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'ekEEFxnYssQ?si=0wQ_3E2nHNJX2kai', chefId: 1 },
+    { id: 38, title: 'Salada de Frutas', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'RtY5PW-8b7g?si=87cWquSVoD-z3hjN', chefId: 3 },
+    { id: 39, title: 'Barrinha de Cereal Caseira', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'u2AH6e3w0BA?si=L9Tza3HDQHNUKXup', chefId: 4 },
+    { id: 40, title: 'Pudim de Chia', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'pIw9eksj2CQ?si=Ls3GuyRtE11-X4KX', chefId: 1 },
+
+    // Pratos
+    { id: 41, title: 'Frango ao Limão', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'zIDRTvXV4pM?si=w6hPieu9SQhofIVl', chefId: 6 },
+    { id: 42, title: 'Carne de Panela', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'vO2cR7DoUKE?si=DNnOxTeUsbBCagVT', chefId: 7 },
+    { id: 43, title: 'Peixe Frito ao Molho Tártaro', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'njz7lWPwPdI?si=tQKSys1GyaRnbYC9', chefId: 7 },
+    { id: 44, title: 'Arroz à Grega', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'mNf2nGNKas0?si=BW8Loy6hn8QP350k', chefId: 4 },
+    { id: 45, title: 'Escondidinho de Carne Seca', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '1I8jp7U9bjg?si=p_IozM54H3iZeu8c', chefId: 5 },
+    { id: 46, title: 'Feijoada', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '2SpzVuUlwDg?si=zO1ULK3Sq_ZQjfjW', chefId: 4 },
+    { id: 47, title: 'Risoto de Palmito', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '6m0AilGYa00?si=mYEadjjz_MahRsdp', chefId: 1 },
+    { id: 48, title: 'Salpicão de Frango', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'WQPLlAff_6o?si=Fx6q3Ywr-zrrAGvh', chefId: 7 },
+    { id: 49, title: 'Estrogonofe', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'xfZ4NIcRO-c?si=qxtcoA3M1s2uTpns', chefId: 8 },
+    { id: 50, title: 'Filé Mignon ao Molho Madeira', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'IhbznCA_6Kk?si=GQgnx6yEA-1Z3Yky', chefId: 4 },
 ];
+
+// banco de dados de chefs
+const db_chefs = [
+    { id: 1, name: 'Palmirinha Onofre', img: 'imagens/palmirinha_onofre.jpg' },
+    { id: 2, name: 'Receitas Fáceis Meu Sertão', img: 'imagens/RECEITAS_FACEIS_MEU_SERTAO.jpg' },
+    { id: 3, name: 'Tata Pereira', img: 'imagens/tata_pereira.jpg' },
+    { id: 4, name: 'Chef Convidado', img: 'imagens/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg' },
+    { id: 5, name: 'Receitas', img: 'imagens/receitas.jpg' },
+    { id: 6, name: 'Ana Maria Braga', img: 'imagens/ana_maria_braga.webp' },
+    { id: 7, name: 'Paola Carosella', img: 'imagens/paola_carosella.jpg' },
+    { id: 8, name: 'Erick Jacquin', img: 'imagens/erick_jacquin.jpg' }
+];
+
+// ==========================================================
+// FUNÇÃO UTILITÁRIA (Embaralhar)
+// ==========================================================
+function shuffleArray(array) {
+    // Copia o array para não modificar o original
+    const shuffledArray = [...array]; 
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+}
 
 // ==========================================================
 // 3. LÓGICA DO APP (Roda após o DOM carregar)
@@ -85,15 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const recipeGrid = document.querySelector('.recipe-grid');
         const filterButtons = document.querySelectorAll('.recipe-filters .filter-btn');
-
-        // Função para embaralhar um array (para pegar aleatórios)
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
 
         // Função que RENDERIZA as receitas no HTML
         function renderRecipes(recipes) {
@@ -126,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const filterText = filter.toLowerCase(); // 'doces', 'salgados', 'em alta'
 
             if (filterText === 'em alta') {
-                const types = ['Doces', 'Salgados', 'Vegano']; // (Adicione 'Saudável' e 'Pratos' aqui)
+                const types = ['Doces', 'Salgados', 'Vegano', 'Saudável', 'Pratos']; // (Adicione 'Saudável' e 'Pratos' aqui)
                 
                 types.forEach(type => {
                     const typeRecipes = db_recipes.filter(r => r.type === type);
@@ -160,29 +198,162 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Carga Inicial ---
         // Mostra as receitas "Em Alta" assim que a página carrega
         showRecipes('Em Alta');
+
+        // --- Lógica da Sidebar de "Últimos Recebidos" ---
+        const sidebarList = document.getElementById('ultimos-recebidos-list');
+        // Lista com todos os tipos que queremos exibir na sidebar
+        const recipeTypes = ['Doces', 'Salgados', 'Vegano', 'Saudável', 'Pratos']; 
+        
+        if (sidebarList) {
+            recipeTypes.forEach(type => {
+                // Encontra a *primeira* receita de cada tipo
+                const recipe = db_recipes.find(r => r.type === type);
+                
+                if (recipe) {
+                    const li = document.createElement('li');
+                    // Cria o link <li>...</li> para a receita
+                    li.innerHTML = `
+                        <a href="reproducao.html?id=${recipe.id}">
+                            <img src="${recipe.img}" alt="${recipe.title}">
+                            <span>${recipe.title}</span>
+                        </a>
+                    `;
+                    sidebarList.appendChild(li);
+                }
+            });
+        }
+
+        // Encontra a lista de chefs no HTML
+        const chefList = document.getElementById('chefs-list-js');
+        
+        if (chefList) {
+            chefList.innerHTML = ''; // Limpa a lista
+
+            // 2. Itera sobre o banco de dados de chefs
+            db_chefs.forEach(chef => {
+                
+                // 3. Encontra a primeira receita associada a este chef
+                const firstRecipe = db_recipes.find(recipe => recipe.chefId === chef.id);
+                
+                // 4. Define o link (href)
+                // Se o chef tiver uma receita, linka para ela. Se não, linka para "#".
+                const link = firstRecipe ? `reproducao.html?id=${firstRecipe.id}` : '#';
+                
+                // 5. Cria o HTML do item da lista
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <a href="${link}">
+                        <img src="${chef.img}" alt="${chef.name}" class="profile-pic"> 
+                        <span>${chef.name}</span>
+                    </a>
+                `;
+
+                // 6. Adiciona o item à lista no HTML
+                chefList.appendChild(li);
+            });
+        }
     }
     
     // --- 3.3. Lógica da Reprodução (reproducao.html) ---
-    if (document.body.classList.contains('page-reproducao')) { // <-- (Veja Passo 4)
+    if (document.body.classList.contains('page-reproducao')) { 
         
-        // Lógica para pegar o ID da URL e carregar o vídeo
         const urlParams = new URLSearchParams(window.location.search);
-        const recipeId = urlParams.get('id'); // Pega o ?id=1 da URL
+        const recipeId = urlParams.get('id'); // Pega o ID da URL (ex: "5")
+
+        // Converter o ID da URL (texto) para número
+        const recipeIdNum = Number(recipeId);
         
-        if (recipeId) {
-            const recipe = db_recipes.find(r => r.id == recipeId);
+        // Pega o elemento <ul> que preparamos no HTML
+        const recommendationList = document.getElementById('recommendation-list-js');
+
+        if (recipeIdNum && db_recipes.length > 0) {
+            
+            // Encontra a receita principal
+            const recipe = db_recipes.find(r => r.id === recipeIdNum);
             
             if (recipe) {
-                // (Aqui você atualizaria o título, a descrição e o player do vídeo)
+                // Atualiza o título da página
                 const titleElement = document.querySelector('.video-title');
                 if (titleElement) {
                     titleElement.textContent = recipe.title;
                 }
-                // (Adicione a lógica de carregar o <iframe> do YouTube aqui)
+                // Encontra o <iframe> que colocamos no HTML
+                const player = document.getElementById('youtube-player');
+                
+                // Pega o ID do YouTube do nosso banco de dados
+                const videoId = recipe.youtubeId;
+
+                // Monta a URL de "embed"
+                const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+                // Atualiza o <iframe>
+                if (player && videoId && videoId !== "USE_SEU_ID_AQUI") {
+                    player.setAttribute('src', embedUrl);
+                    player.setAttribute('title', recipe.title); // Bom para acessibilidade
+                } else if (player) {
+                    // Se o ID não foi preenchido, mostra uma mensagem
+                    player.parentElement.innerHTML = "<h1>Vídeo não disponível.</h1>";
+                }
+
+                // Encontra o Chef
+                // Usamos o recipe.chefId (ex: 3) para buscar no db_chefs
+                const chef = db_chefs.find(c => c.id === recipe.chefId);
+                
+                // 5. Encontra o container do chef no HTML
+                const chefInfoBox = document.getElementById('chef-info-box');
+
+                // 6. Preenche o HTML do chef
+                if (chef && chefInfoBox) {
+                    chefInfoBox.innerHTML = `
+                        <img src="${chef.img}" alt="${chef.name}" class="chef-avatar">
+                        <div>
+                            <a href="#" class="chef-name">${chef.name}</a>
+                        </div>
+                    `;
+                } else if (chefInfoBox) {
+                    chefInfoBox.innerHTML = "<p>Chef não informado.</p>";
+                }
+
+                // Popula as recomendações (SE a lista existir)
+                if (recommendationList) {
+                    // Limpa a lista (caso tenha algo)
+                    recommendationList.innerHTML = '';
+
+                    const numRecommendations = 4; // Quantos vídeos recomendar
+
+                    // Filtra o DB para pegar TODAS as receitas, EXCETO a atual
+                    const otherRecipes = db_recipes.filter(r => r.id !== recipeIdNum);
+
+                    // Embaralha as outras receitas e pega as 4 primeiras
+                    const randomRecommendations = shuffleArray(otherRecipes).slice(0, numRecommendations);
+
+                    // Cria o HTML para cada recomendação
+                    randomRecommendations.forEach(rec => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <a href="reproducao.html?id=${rec.id}" class="recommendation-card">
+                                <div class="card-thumbnail">
+                                    <img src="${rec.img}" alt="${rec.title}">
+                                    <span class="video-duration">20:45</span>
+                                </div>
+                                <div class="card-info">
+                                    <h4>${rec.title}</h4>
+                                </div>
+                            </a>
+                        `;
+                        recommendationList.appendChild(li);
+                    });
+                } else {
+                    // Isso é um aviso para NÓS (desenvolvedores)
+                    console.error("Erro: O elemento #recommendation-list-js não foi encontrado no HTML.");
+                }
             } else {
                 alert('Receita não encontrada.');
-                window.location.href = 'index.html'; // Volta para o catálogo
+                window.location.href = 'index.html'; 
             }
+        } else {
+            alert('ID da receita não fornecido ou inválido.');
+            window.location.href = 'index.html';
         }
     }
 });

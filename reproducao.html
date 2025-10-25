@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/app.js" defer></script>
     <title>Reprodução - Sabor Em Vídeo</title>
 </head>
@@ -15,23 +16,21 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="index.html"> Início</a></li>
-                <li><a href="#" class="active"> Receitas</a></li>
-                <li><a href="#"> Categorias</a></li>
+                <li><a href="index.html" class="active"><i class="fa-solid fa-book-open"></i> Catálogo</a></li>
             </ul>
 
             <h3 class="menu-title">Biblioteca</h3>
             <ul class="nav-menu">
-                <li><a href="#"> Meus favoritos</a></li>
-                <li><a href="#"> Histórico</a></li>
-                <li><a href="#"> Comunidade</a></li>
-                <li><a href="#"> Desafios</a></li>
+                <li><a href="#"><i class="fa-solid fa-heart"></i> Meus favoritos</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Comunidade</a></li>
+                <li><a href="#"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
             </ul>
 
             <h3 class="menu-title">Suporte</h3>
             <ul class="nav-menu">
-                <li><a href="login.html"> Conta</a></li>
-                <li><a href="#"> Ajuda e suporte</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i> Conta</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i> Ajuda e suporte</a></li>
             </ul>
         </nav>
 
@@ -48,9 +47,16 @@
 
                 <main>
                     <section class="video-player-container">
-                        <div class="video-embed-placeholder">
-                            <img src="https://via.placeholder.com/800x450?text=Player+de+V%C3%ADdeo" alt="Vídeo de Frango Assado">
-                        </div>
+                        <iframe 
+                            id="youtube-player"
+                            width="100%" 
+                            height="100%" 
+                            src="" 
+                            title="Player de vídeo Sabor em Vídeo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
                     </section>
                     <div class="video-content-white-bg">
                         <section class="video-details">
@@ -68,7 +74,7 @@
                                 </div>
                             </div>
                         </section>
-
+                        <section class="chef-info-section" id="chef-info-box"></section>
                         <section class="comments-section">
                             <h2>Comentários</h2>
                             
@@ -80,7 +86,7 @@
                                 <div class="comment">
                                     <p><strong>@Lucas:</strong> Deu super certo!</p>
                                 </div>
-                                </div>
+                            </div>
                         </section>
                     </div>
                 </main>
@@ -88,45 +94,11 @@
                 <aside class="right-sidebar">
                     <section class="sidebar-widget">
                         <h3>RECOMENDAÇÕES</h3>
-                        
-                        <ul class="recommendation-list">
-                            <li>
-                                <a href="#" class="recommendation-card">
-                                    <div class="card-thumbnail">
-                                        <span class="video-duration">35:02</span>
-                                    </div>
-                                    <div class="card-info">
-                                        <h4>Pudim de panetone na panela de pressão</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recommendation-card">
-                                    <div class="card-thumbnail">
-                                        <span class="video-duration">26:15</span>
-                                    </div>
-                                    <div class="card-info">
-                                        <h4>Risoto de queijo com cenoura assada</h4>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="recommendation-card">
-                                    <div class="card-thumbnail">
-                                        <span class="video-duration">28:15</span>
-                                    </div>
-                                    <div class="card-info">
-                                        <h4>Croquete de carne moída</h4>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul class="recommendation-list" id="recommendation-list-js"></ul>
                     </section>
                 </aside>
-                
             </div>
         </div>
     </div>
-
 </body>
 </html>

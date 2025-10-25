@@ -32,27 +32,17 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a {text-decoration: none; color: inherit;}
 
-ul {
-    list-style: none;
-}
+ul {list-style: none;}
 
-button, input {
-    font-family: 'Poppins', sans-serif;
-}
+button, input {font-family: 'Poppins', sans-serif;}
 
 /* ================================== */
 /* LAYOUT PRINCIPAL          */
 /* ================================== */
 
-.app-layout {
-    display: flex;
-    min-height: 100vh;
-}
+.app-layout {display: flex; min-height: 100vh;}
 
 /* ================================== */
 /* NAVEGAÇÃO (LADO ESQUERDO)     */
@@ -205,6 +195,7 @@ main {
     color: var(--text-light);
     padding: 30px;
     border-radius: 15px;
+    text-align: center;
 }
 
 .welcome-banner h2 {
@@ -217,6 +208,8 @@ main {
     font-size: 1rem;
     margin-bottom: 20px;
     max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .welcome-banner .btn-primary {
@@ -673,3 +666,29 @@ main {
 .video-content-white-bg .comment {color: var(--text-dark);}
 
 .video-content-white-bg .comment strong {color: var(--text-gray);}
+
+.chef-info-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    /* Linha sutil para separar dos detalhes e comentários */
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    margin: 25px 0; /* Espaçamento */
+}
+
+.chef-info-section .chef-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chef-info-section .chef-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.chef-info-section .chef-name:hover { color: var(--brand-primary); }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="js/app.js" defer></script>
     <title>Sabor Em Vídeo - Início</title>
 </head>
@@ -15,23 +16,21 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="index.html" class="active"> Início</a></li>
-                <li><a href="reproducao.html"> Receitas</a></li>
-                <li><a href="#"> Categorias</a></li>
+                <li><a href="index.html" class="active"><i class="fa-solid fa-book-open"></i> Catálogo</a></li>
             </ul>
 
             <h3 class="menu-title">Biblioteca</h3>
             <ul class="nav-menu">
-                <li><a href="#"> Meus favoritos</a></li>
-                <li><a href="#"> Histórico</a></li>
-                <li><a href="#"> Comunidade</a></li>
-                <li><a href="#"> Desafios</a></li>
+                <li><a href="#"><i class="fa-solid fa-heart"></i> Meus favoritos</a></li>
+                <li><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</a></li>
+                <li><a href="#"><i class="fa-solid fa-users"></i> Comunidade</a></li>
+                <li><a href="#"><i class="fa-solid fa-trophy"></i> Desafios</a></li>
             </ul>
 
             <h3 class="menu-title">Suporte</h3>
             <ul class="nav-menu">
-                <li><a href="login.html"> Conta</a></li>
-                <li><a href="#"> Ajuda e suporte</a></li>
+                <li><a href="login.html"><i class="fa-solid fa-user"></i> Conta</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i> Ajuda e suporte</a></li>
             </ul>
         </nav>
 
@@ -47,8 +46,8 @@
 
                 <div class="user-profile">
                     <span>Samuel Correia</span>
-                    <img src="https://via.placeholder.com/40" alt="Foto de Samuel Ferreira" class="profile-pic">
-                    </div>
+                    <img src="imagens/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Foto de Samuel Correia" class="profile-pic">
+                </div>
             </header>
 
             <div class="content-area">
@@ -93,24 +92,12 @@
                 <aside class="right-sidebar">
                     <section class="sidebar-widget">
                         <h3>Últimos recebidos</h3>
-                        <ul class="widget-list">
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Risoto"> <span>Risoto com abóbora</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Torta"> <span>Torta de batata com sardinha</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Omelete"> <span>Omelete na Air Fryer</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Pavlova"> <span>Pavlova com baba de moça</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Bombom"> <span>Bombom de sorvete</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40x40" alt="Focaccia"> <span>Focaccia de batata com tomilho</span></a></li>
-                        </ul>
+                        <ul class="widget-list" id="ultimos-recebidos-list"></ul>
                     </section>
 
                     <section class="sidebar-widget">
                         <h3>Chefs</h3>
-                        <ul class="widget-list chefs-list">
-                            <li><a href="#"><img src="https://via.placeholder.com/40" alt="Nayara Soares" class="profile-pic"> <span>Nayara Soares</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40" alt="Victor Mordachini" class="profile-pic"> <span>Victor Mordachini</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40" alt="Pedro Pina" class="profile-pic"> <span>Pedro Pina</span></a></li>
-                            <li><a href="#"><img src="https://via.placeholder.com/40" alt="Pedro Moraes" class="profile-pic"> <span>Pedro Moraes</span></a></li>
-                        </ul>
+                        <ul class="widget-list chefs-list" id="chefs-list-js"></ul>
                     </section>
                 </aside>
                 
