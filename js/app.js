@@ -23,76 +23,88 @@
 // ==========================================================
 const db_recipes = [
     // Doces
-    { id: 1, title: 'Brigadeiro', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'obL3IPdZKTo?si=tvYtxfWeFoGzyPfA', chefId: 1 },
-    { id: 2, title: 'Bolo de cenoura', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'DjHPC-dEd8o?si=0411tZztLU4i_tkO', chefId: 4 },
-    { id: 3, title: 'Pudim de Leite Condensado', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'olw3gMc4YlU?si=DGkN1YguqprEzjBc', chefId: 4 },
-    { id: 4, title: 'Mousse de Maracujá', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'tKCvDIXp6FI?si=WxxpPm2HDk6Gjig_', chefId: 4 },
-    { id: 5, title: 'Torta de Limão', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'P3kCnRQNqYs?si=ItmVFQhg04KMnliY', chefId: 4 },
-    { id: 6, title: 'Pudim de Iogurte', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'G8DMqk2HGAI?si=piEzaqnHWVVJe_Fd', chefId: 6 },
-    { id: 7, title: 'Sorvete de Pé de Moleque', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'Y2tw-DozZHY?si=1RVbJY9MJoT31WFX', chefId: 6 },
-    { id: 8, title: 'Pavê de Morango', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'HD7MK80XtPk?si=pfNxlSf5w20PCzwU', chefId: 1 },
-    { id: 9, title: 'Palha Italiana', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'JSfHpJq0i0w?si=ddsSn85p15ojH_fd', chefId: 6 },
-    { id: 10, title: 'Flan de Goiaba', type: 'Doces', img: 'https://via.placeholder.com/300x180', youtubeId: 'PWO7IU8AoT4?si=aKEzD5zdlGaBAXNe', chefId: 1 },
+    { id: 1, title: 'Brigadeiro', type: 'Doces', img: 'imagens/receitas/brigadeiro.webp', youtubeId: 'obL3IPdZKTo?si=tvYtxfWeFoGzyPfA', chefId: 1 },
+    { id: 2, title: 'Bolo de cenoura', type: 'Doces', img: 'imagens/receitas/bolo_de_cenoura.webp', youtubeId: 'DjHPC-dEd8o?si=0411tZztLU4i_tkO', chefId: 4 },
+    { id: 3, title: 'Pudim de Leite Condensado', type: 'Doces', img: 'imagens/receitas/pudim_de_leite_condensado.webp', youtubeId: 'olw3gMc4YlU?si=DGkN1YguqprEzjBc', chefId: 4 },
+    { id: 4, title: 'Mousse de Maracujá', type: 'Doces', img: 'imagens/receitas/mousse_de_maracuja.webp', youtubeId: 'tKCvDIXp6FI?si=WxxpPm2HDk6Gjig_', chefId: 4 },
+    { id: 5, title: 'Torta de Limão', type: 'Doces', img: 'imagens/receitas/torta_de_limao.webp', youtubeId: 'P3kCnRQNqYs?si=ItmVFQhg04KMnliY', chefId: 4 },
+    { id: 6, title: 'Pudim de Iogurte', type: 'Doces', img: 'imagens/receitas/pudim_de_iogurte.avif', youtubeId: 'G8DMqk2HGAI?si=piEzaqnHWVVJe_Fd', chefId: 6 },
+    { id: 7, title: 'Sorvete de Pé de Moleque', type: 'Doces', img: 'imagens/receitas/sorvete_de_pe_de_moleque.webp', youtubeId: 'Y2tw-DozZHY?si=1RVbJY9MJoT31WFX', chefId: 6 },
+    { id: 8, title: 'Pavê de Morango', type: 'Doces', img: 'imagens/receitas/pave_de_morango.avif', youtubeId: 'HD7MK80XtPk?si=pfNxlSf5w20PCzwU', chefId: 1 },
+    { id: 9, title: 'Palha Italiana', type: 'Doces', img: 'imagens/receitas/palha_italiana.webp', youtubeId: 'JSfHpJq0i0w?si=ddsSn85p15ojH_fd', chefId: 6 },
+    { id: 10, title: 'Flan de Goiaba', type: 'Doces', img: 'imagens/receitas/flan_de_goiaba.jpg', youtubeId: 'PWO7IU8AoT4?si=aKEzD5zdlGaBAXNe', chefId: 1 },
 
     // Salgados
-    { id: 11, title: 'Macarrão à carbonara', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'pgh38V5EAm4?si=mTPA8yz_S-CEZwel', chefId: 5 },
-    { id: 12, title: 'Coxinha de Frango', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '5u6f4Da-1Tg?si=z4wVtUJge4xYgm40', chefId: 1 },
-    { id: 13, title: 'Pão de Queijo', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'E9FF2-ch1tc?si=2hzLxngh17wBb7JJ', chefId: 3 },
-    { id: 14, title: 'Lasanha Bolonhesa', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '-9Wp7NfeTBY?si=mN9ulE0POJ8PM5FW', chefId: 3 },
-    { id: 15, title: 'Muffins Salgados', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '5eqkrniYVFI?si=_uv7LGzmqTAMpLbY', chefId: 3 },
-    { id: 16, title: 'Empadinhas', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'gtVWZ9p826Q?si=HcQt5D5uexL3jiz2', chefId: 3 },
-    { id: 17, title: 'Provolone Assado', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '6fRg6xOfEKo?si=KWyPSWuv-9ErDI6z', chefId: 3 },
-    { id: 18, title: 'Enroladinho de Presunto e Queijo', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: '3u68zcpUClQ?si=Dlu-TCl9iBxPeKLs', chefId: 3 },
-    { id: 19, title: 'Pizza Enrolada', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 'qrAjFa5Cw_4?si=gFwIuk5EcbbPu-9K', chefId: 3 },
-    { id: 20, title: 'Cuzcuz de milho', type: 'Salgados', img: 'https://via.placeholder.com/300x180', youtubeId: 't3i9AVYlHq8?si=FtJ3lPmkPnhRv_VT', chefId: 2 },
+    { id: 11, title: 'Macarrão à carbonara', type: 'Salgados', img: 'imagens/receitas/macarrao_a_carbonara.webp', youtubeId: 'pgh38V5EAm4?si=mTPA8yz_S-CEZwel', chefId: 5 },
+    { id: 12, title: 'Coxinha de Frango', type: 'Salgados', img: 'imagens/receitas/coxinha_de_frango.webp', youtubeId: '5u6f4Da-1Tg?si=z4wVtUJge4xYgm40', chefId: 1 },
+    { id: 13, title: 'Pão de Queijo', type: 'Salgados', img: 'imagens/receitas/pao_de_queijo.webp', youtubeId: 'E9FF2-ch1tc?si=2hzLxngh17wBb7JJ', chefId: 3 },
+    { id: 14, title: 'Lasanha à Bolonhesa', type: 'Salgados', img: 'imagens/receitas/lasanha_a_bolonhesa.webp', youtubeId: '-9Wp7NfeTBY?si=mN9ulE0POJ8PM5FW', chefId: 3 },
+    { id: 15, title: 'Muffins Salgados', type: 'Salgados', img: 'imagens/receitas/muffins_salgados.webp', youtubeId: '5eqkrniYVFI?si=_uv7LGzmqTAMpLbY', chefId: 3 },
+    { id: 16, title: 'Empadinhas', type: 'Salgados', img: 'imagens/receitas/empadinhas.webp', youtubeId: 'gtVWZ9p826Q?si=HcQt5D5uexL3jiz2', chefId: 3 },
+    { id: 17, title: 'Provolone Assado', type: 'Salgados', img: 'imagens/receitas/provolone_assado.jpg', youtubeId: '6fRg6xOfEKo?si=KWyPSWuv-9ErDI6z', chefId: 3 },
+    { id: 18, title: 'Enroladinho de Presunto e Queijo', type: 'Salgados', img: 'imagens/receitas/enroladinho_de_presunto_e_queijo.jpeg', youtubeId: '3u68zcpUClQ?si=Dlu-TCl9iBxPeKLs', chefId: 3 },
+    { id: 19, title: 'Pizza Enrolada', type: 'Salgados', img: 'imagens/receitas/pizza_enrolada.webp', youtubeId: 'qrAjFa5Cw_4?si=gFwIuk5EcbbPu-9K', chefId: 3 },
+    { id: 20, title: 'Cuscuz de milho', type: 'Salgados', img: 'imagens/receitas/cuscuz_de_milho.webp', youtubeId: 't3i9AVYlHq8?si=FtJ3lPmkPnhRv_VT', chefId: 2 },
 
     // Vegano
-    { id: 21, title: 'Moqueca de Banana-da-Terra', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'OAqPkYoi00s?si=_NMEXs8SLJ47dJDE', chefId: 5 },
-    { id: 22, title: 'Strogonoff de Cogumelos com Palmito', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'Hih9D7zOIKs?si=ca0aGey9PNT534ww', chefId: 4 },
-    { id: 23, title: '"Queijo" de Castanha', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'HPj4ECyvC1I?si=r4fZpbN1HneJNbu7', chefId: 5 },
-    { id: 24, title: 'Hambúrguer de Grão de Bico', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'v30rGNce7iw?si=MjhBYJiWr7PoS5gt', chefId: 4 },
-    { id: 25, title: 'Torta Salgada Vegana', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'VvpdFEqdaZs?si=8cphwctGfoT-xjnH', chefId: 4 },
-    { id: 26, title: 'Humus e Falafel', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'NyPJ99kllMU?si=KC9OijM9nfWBf_xr', chefId: 4 },
-    { id: 27, title: 'Guacamole', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'N49ag-DmpA0?si=xLzd5Q3vekLrzNkV', chefId: 5 },
-    { id: 28, title: 'Feijão Tropeiro Vegano', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'RTnFCrKpHjI?si=7gIuNb4WJFCYNehM', chefId: 5 },
-    { id: 29, title: 'Bolo Vegano de Chocolate', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: 'Qw7oh2gkR_k?si=B6Wj3v3tpL70-LjY', chefId: 4 },
-    { id: 30, title: 'Curry de Legumes', type: 'Vegano', img: 'https://via.placeholder.com/300x180', youtubeId: '_bLFOLYZ1i8?si=c7Q6kIA703bobh7R', chefId: 5 },
+    { id: 21, title: 'Moqueca de Banana-da-Terra', type: 'Vegano', img: 'imagens/receitas/moqueca_de_banana_da_terra.webp', youtubeId: 'OAqPkYoi00s?si=_NMEXs8SLJ47dJDE', chefId: 5 },
+    { id: 22, title: 'Strogonoff de Cogumelos com Palmito', type: 'Vegano', img: 'imagens/receitas/strogonoff_de_cogumelos_com_palmito.jpg', youtubeId: 'Hih9D7zOIKs?si=ca0aGey9PNT534ww', chefId: 4 },
+    { id: 23, title: '"Queijo" de Castanha', type: 'Vegano', img: 'imagens/receitas/queijo_de_castanha.jpg', youtubeId: 'HPj4ECyvC1I?si=r4fZpbN1HneJNbu7', chefId: 5 },
+    { id: 24, title: 'Hambúrguer de Grão de Bico', type: 'Vegano', img: 'imagens/receitas/hamburguer_de_grao_de_bico.avif', youtubeId: 'v30rGNce7iw?si=MjhBYJiWr7PoS5gt', chefId: 4 },
+    { id: 25, title: 'Torta Salgada Vegana', type: 'Vegano', img: 'imagens/receitas/torta_salgada_vegana.webp', youtubeId: 'VvpdFEqdaZs?si=8cphwctGfoT-xjnH', chefId: 4 },
+    { id: 26, title: 'Humus e Falafel', type: 'Vegano', img: 'imagens/receitas/humus_e_falafel.jpg', youtubeId: 'NyPJ99kllMU?si=KC9OijM9nfWBf_xr', chefId: 4 },
+    { id: 27, title: 'Guacamole', type: 'Vegano', img: 'imagens/receitas/guacamole.webp', youtubeId: 'N49ag-DmpA0?si=xLzd5Q3vekLrzNkV', chefId: 5 },
+    { id: 28, title: 'Feijão Tropeiro Vegano', type: 'Vegano', img: 'imagens/receitas/feijao_tropeiro_vegano.jpg', youtubeId: 'RTnFCrKpHjI?si=7gIuNb4WJFCYNehM', chefId: 5 },
+    { id: 29, title: 'Bolo Vegano de Chocolate', type: 'Vegano', img: 'imagens/receitas/bolo_vegano_de_chocolate.webp', youtubeId: 'Qw7oh2gkR_k?si=B6Wj3v3tpL70-LjY', chefId: 4 },
+    { id: 30, title: 'Curry de Legumes', type: 'Vegano', img: 'imagens/receitas/curry_de_legumes.webp', youtubeId: '_bLFOLYZ1i8?si=c7Q6kIA703bobh7R', chefId: 5 },
 
     // Saudável
-    { id: 31, title: 'Salada de Quinoa', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: '5np4Qc4ZQhc?si=xQduHGMhwDX25YYX', chefId: 4 },
-    { id: 32, title: 'Salada de Batata', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'xe7J8tBMkvk?si=orgqkk9r6LBYYpcl', chefId: 4 },
-    { id: 33, title: 'Peito de Frango Grelhado', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'yurBZw-_1ws?si=02mbijCekTw0x-mM', chefId: 5 },
-    { id: 34, title: 'Wrap Integral', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'YaT9hXICIR8?si=n126QmqR63QOn5AX', chefId: 4 },
-    { id: 35, title: 'Sopa Detox', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'OB1affOJDPc?si=dIsSlSRhDWrceA_j', chefId: 4 },
-    { id: 36, title: 'Iogurte com Granola', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'lrpCST_wu_c?si=1NRd_cyvzyjc3d6I', chefId: 5 },
-    { id: 37, title: 'Omelete Suflê', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'ekEEFxnYssQ?si=0wQ_3E2nHNJX2kai', chefId: 1 },
-    { id: 38, title: 'Salada de Frutas', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'RtY5PW-8b7g?si=87cWquSVoD-z3hjN', chefId: 3 },
-    { id: 39, title: 'Barrinha de Cereal Caseira', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'u2AH6e3w0BA?si=L9Tza3HDQHNUKXup', chefId: 4 },
-    { id: 40, title: 'Pudim de Chia', type: 'Saudável', img: 'https://via.placeholder.com/300x180', youtubeId: 'pIw9eksj2CQ?si=Ls3GuyRtE11-X4KX', chefId: 1 },
+    { id: 31, title: 'Salada de Quinoa', type: 'Saudável', img: 'imagens/receitas/salada_de_quinoa.jpg', youtubeId: '5np4Qc4ZQhc?si=xQduHGMhwDX25YYX', chefId: 4 },
+    { id: 32, title: 'Salada de Batata', type: 'Saudável', img: 'imagens/receitas/salada_de_batata.avif', youtubeId: 'xe7J8tBMkvk?si=orgqkk9r6LBYYpcl', chefId: 4 },
+    { id: 33, title: 'Peito de Frango Grelhado', type: 'Saudável', img: 'imagens/receitas/peito_de_frango_grelhado.webp', youtubeId: 'yurBZw-_1ws?si=02mbijCekTw0x-mM', chefId: 5 },
+    { id: 34, title: 'Wrap Integral', type: 'Saudável', img: 'imagens/receitas/wrap_integral.jpeg', youtubeId: 'YaT9hXICIR8?si=n126QmqR63QOn5AX', chefId: 4 },
+    { id: 35, title: 'Sopa Detox', type: 'Saudável', img: 'imagens/receitas/sopa_detox.webp', youtubeId: 'OB1affOJDPc?si=dIsSlSRhDWrceA_j', chefId: 4 },
+    { id: 36, title: 'Iogurte com Granola', type: 'Saudável', img: 'imagens/receitas/iogurte_com_granola.jpg', youtubeId: 'lrpCST_wu_c?si=1NRd_cyvzyjc3d6I', chefId: 5 },
+    { id: 37, title: 'Omelete Suflê', type: 'Saudável', img: 'imagens/receitas/omelete_sufle.webp', youtubeId: 'ekEEFxnYssQ?si=0wQ_3E2nHNJX2kai', chefId: 1 },
+    { id: 38, title: 'Salada de Frutas', type: 'Saudável', img: 'imagens/receitas/salada_de_frutas.jpg', youtubeId: 'RtY5PW-8b7g?si=87cWquSVoD-z3hjN', chefId: 3 },
+    { id: 39, title: 'Barrinha de Cereal Caseira', type: 'Saudável', img: 'imagens/receitas/barrinha_de_cereal_caseira.webp', youtubeId: 'u2AH6e3w0BA?si=L9Tza3HDQHNUKXup', chefId: 4 },
+    { id: 40, title: 'Pudim de Chia', type: 'Saudável', img: 'imagens/receitas/pudim_de_chia.webp', youtubeId: 'pIw9eksj2CQ?si=Ls3GuyRtE11-X4KX', chefId: 1 },
 
     // Pratos
-    { id: 41, title: 'Frango ao Limão', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'zIDRTvXV4pM?si=w6hPieu9SQhofIVl', chefId: 6 },
-    { id: 42, title: 'Carne de Panela', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'vO2cR7DoUKE?si=DNnOxTeUsbBCagVT', chefId: 7 },
-    { id: 43, title: 'Peixe Frito ao Molho Tártaro', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'njz7lWPwPdI?si=tQKSys1GyaRnbYC9', chefId: 7 },
-    { id: 44, title: 'Arroz à Grega', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'mNf2nGNKas0?si=BW8Loy6hn8QP350k', chefId: 4 },
-    { id: 45, title: 'Escondidinho de Carne Seca', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '1I8jp7U9bjg?si=p_IozM54H3iZeu8c', chefId: 5 },
-    { id: 46, title: 'Feijoada', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '2SpzVuUlwDg?si=zO1ULK3Sq_ZQjfjW', chefId: 4 },
-    { id: 47, title: 'Risoto de Palmito', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: '6m0AilGYa00?si=mYEadjjz_MahRsdp', chefId: 1 },
-    { id: 48, title: 'Salpicão de Frango', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'WQPLlAff_6o?si=Fx6q3Ywr-zrrAGvh', chefId: 7 },
-    { id: 49, title: 'Estrogonofe', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'xfZ4NIcRO-c?si=qxtcoA3M1s2uTpns', chefId: 8 },
-    { id: 50, title: 'Filé Mignon ao Molho Madeira', type: 'Pratos', img: 'https://via.placeholder.com/300x180', youtubeId: 'IhbznCA_6Kk?si=GQgnx6yEA-1Z3Yky', chefId: 4 },
+    { id: 41, title: 'Frango ao Limão', type: 'Pratos', img: 'imagens/receitas/frango_ao_limao.webp', youtubeId: 'zIDRTvXV4pM?si=w6hPieu9SQhofIVl', chefId: 6 },
+    { id: 42, title: 'Carne de Panela', type: 'Pratos', img: 'imagens/receitas/carne_de_panela.jpg', youtubeId: 'vO2cR7DoUKE?si=DNnOxTeUsbBCagVT', chefId: 7 },
+    { id: 43, title: 'Peixe Frito ao Molho Tártaro', type: 'Pratos', img: 'imagens/receitas/peixe_frito_ao_molho_tartaro.avif', youtubeId: 'njz7lWPwPdI?si=tQKSys1GyaRnbYC9', chefId: 7 },
+    { id: 44, title: 'Arroz à Grega', type: 'Pratos', img: 'imagens/receitas/arroz_a_grega.webp', youtubeId: 'mNf2nGNKas0?si=BW8Loy6hn8QP350k', chefId: 4 },
+    { id: 45, title: 'Escondidinho de Carne Seca', type: 'Pratos', img: 'imagens/receitas/escondidinho_de_carne_seca.webp', youtubeId: '1I8jp7U9bjg?si=p_IozM54H3iZeu8c', chefId: 5 },
+    { id: 46, title: 'Feijoada', type: 'Pratos', img: 'imagens/receitas/feijoada.webp', youtubeId: '2SpzVuUlwDg?si=zO1ULK3Sq_ZQjfjW', chefId: 4 },
+    { id: 47, title: 'Risoto de Palmito', type: 'Pratos', img: 'imagens/receitas/risoto_de_palmito.webp', youtubeId: '6m0AilGYa00?si=mYEadjjz_MahRsdp', chefId: 1 },
+    { id: 48, title: 'Salpicão de Frango', type: 'Pratos', img: 'imagens/receitas/salpicao_de_frango.webp', youtubeId: 'WQPLlAff_6o?si=Fx6q3Ywr-zrrAGvh', chefId: 7 },
+    { id: 49, title: 'Estrogonofe de Filé Mignon', type: 'Pratos', img: 'imagens/receitas/estrogonofe_de_file_mignon.jpg', youtubeId: 'xfZ4NIcRO-c?si=qxtcoA3M1s2uTpns', chefId: 8 },
+    { id: 50, title: 'Filé Mignon ao Molho Madeira', type: 'Pratos', img: 'imagens/receitas/file_mignon_ao_molho_madeira.avif', youtubeId: 'IhbznCA_6Kk?si=GQgnx6yEA-1Z3Yky', chefId: 4 },
 ];
 
-// banco de dados de chefs
+// Banco de dados de chefs
 const db_chefs = [
-    { id: 1, name: 'Palmirinha Onofre', img: 'imagens/palmirinha_onofre.jpg' },
-    { id: 2, name: 'Receitas Fáceis Meu Sertão', img: 'imagens/RECEITAS_FACEIS_MEU_SERTAO.jpg' },
-    { id: 3, name: 'Tata Pereira', img: 'imagens/tata_pereira.jpg' },
+    { id: 1, name: 'Palmirinha Onofre', img: 'imagens/chefs/palmirinha_onofre.jpg' },
+    { id: 2, name: 'Receitas Fáceis Meu Sertão', img: 'imagens/chefs/RECEITAS_FACEIS_MEU_SERTAO.jpg' },
+    { id: 3, name: 'Tata Pereira', img: 'imagens/chefs/tata_pereira.jpg' },
     { id: 4, name: 'Chef Convidado', img: 'imagens/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg' },
-    { id: 5, name: 'Receitas', img: 'imagens/receitas.jpg' },
-    { id: 6, name: 'Ana Maria Braga', img: 'imagens/ana_maria_braga.webp' },
-    { id: 7, name: 'Paola Carosella', img: 'imagens/paola_carosella.jpg' },
-    { id: 8, name: 'Erick Jacquin', img: 'imagens/erick_jacquin.jpg' }
+    { id: 5, name: 'Receitas', img: 'imagens/chefs/receitas.jpg' },
+    { id: 6, name: 'Ana Maria Braga', img: 'imagens/chefs/ana_maria_braga.webp' },
+    { id: 7, name: 'Paola Carosella', img: 'imagens/chefs/paola_carosella.jpg' },
+    { id: 8, name: 'Erick Jacquin', img: 'imagens/chefs/erick_jacquin.jpg' }
+];
+
+// Banco de dados de comentários
+const db_comments = [
+    { username: '@Lucas', commentText: 'Deu super certo!' },
+    { username: '@MariaC', commentText: 'Amei a receita! Fiz aqui em casa e ficou uma delícia.' },
+    { username: '@ChefDoFimDeSemana', commentText: 'Dica: adicionei um pouco de raspas de limão e ficou ótimo.' },
+    { username: '@AnaJulia', commentText: 'Maravilhoso! O chef explica muito bem, vídeo nota 10.' },
+    { username: '@Rodrigo_S', commentText: 'Vou tentar fazer amanhã! Parece fácil e delicioso.' },
+    { username: '@FernandaL', commentText: 'Perfeito! Rápido e prático para o dia a dia.' },
+    { username: '@GourmetIniciante', commentText: 'O meu queimou um pouco, mas o sabor ficou bom. Vou tentar de novo kkkk' },
+    { username: '@TiaCidaReceitas', commentText: 'Que saudade dessa receita, me lembrou minha avó.' }
 ];
 
 // ==========================================================
@@ -313,6 +325,86 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (chefInfoBox) {
                     chefInfoBox.innerHTML = "<p>Chef não informado.</p>";
                 }
+
+
+                // Função para gerar número aleatório
+                function getRandomInt(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+
+                // Atualiza Visualizações Aleatórias
+                const viewCountEl = document.getElementById('view-count-js');
+                if (viewCountEl) {
+                    viewCountEl.textContent = getRandomInt(10, 500); // Ex: 10k a 500k
+                }
+
+                // Atualiza Likes Aleatórios
+                const likeCountEl = document.getElementById('like-count-js');
+                if (likeCountEl) {
+                    likeCountEl.textContent = getRandomInt(1, 99); // Ex: 1k a 99k
+                }
+
+                // Lógica do "...mais" (Lorem Ipsum)
+                const toggleBtn = document.getElementById('toggle-description');
+                const descriptionBox = document.getElementById('video-full-description');
+                
+                // Texto Lorem Ipsum
+                const loremIpsumText = `
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Proin vel justo nec ligula sollicitudin scelerisque. 
+Nulla facilisi. Integer feugiat, elit nec congue iaculis, 
+nunc arcu tincidunt dolor, sit amet semper libero velit 
+ut eros. 
+
+Ingredientes:
+- 2 xícaras de...
+- 1 colher de...
+- 500g de...
+
+Modo de preparo:
+Morbi euismod, justo ac ultrices varius, nisl erat 
+luctus diam, eu vehicula velit odio vel est. 
+Quisque mattis, justo in commodo.
+                `;
+
+                // Adiciona o evento de clique no botão
+                if (toggleBtn && descriptionBox) {
+                    toggleBtn.addEventListener('click', (e) => {
+                        e.preventDefault(); // Impede o link de pular a página
+                        
+                        // Define o texto, mostra a caixa e esconde o botão
+                        descriptionBox.textContent = loremIpsumText;
+                        descriptionBox.style.display = 'block';
+                        toggleBtn.style.display = 'none';
+                    });
+                }
+
+                // Encontra o container da lista de comentários
+                const commentListContainer = document.getElementById('comment-list-js');
+
+                if (commentListContainer) {
+                    const numCommentsToShow = 3; // Quantos comentários aleatórios mostrar
+
+                    // Embaralha o DB de comentários e pega os 3 primeiros
+                    const randomComments = shuffleArray(db_comments).slice(0, numCommentsToShow);
+
+                    // Limpa a lista (caso tenha algo)
+                    commentListContainer.innerHTML = '';
+
+                    // Cria e insere o HTML para cada comentário
+                    randomComments.forEach(comment => {
+                        // (Usando a mesma estrutura que o CSS espera)
+                        const commentHTML = `
+                            <div class="comment">
+                                <p><strong>${comment.username}:</strong> ${comment.commentText}</p>
+                            </div>
+                        `;
+                        commentListContainer.innerHTML += commentHTML;
+                    });
+                }
+
 
                 // Popula as recomendações (SE a lista existir)
                 if (recommendationList) {

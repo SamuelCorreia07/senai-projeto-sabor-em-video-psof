@@ -12,7 +12,7 @@
     <div class="app-layout video-page-layout">
         <nav class="sidebar-nav">
             <a href="index.html" class="logo">
-                <h2>Sabor Em Vídeo</h2>
+                <img src="imagens/logo_dark_background.png" alt="Sabor Em Vídeo - Logo" class="logo-img">
             </a>
 
             <ul class="nav-menu">
@@ -60,17 +60,26 @@
                     </section>
                     <div class="video-content-white-bg">
                         <section class="video-details">
-                            <h1 class="video-title">FRANGO ASSADO COM BATATAS – FÁCIL E RÁPIDO!</h1>
-                            <a href="#" class="video-description-toggle">...mais</a>
+                            <h1 class="video-title"></h1>
+                            <a href="#" class="video-description-toggle" id="toggle-description">...mais</a>
                             
+                            <div class="video-full-description" id="video-full-description"></div>
+
                             <div class="video-stats-actions">
-                                <span class="views">217 mil visualizações</span>
+                                <span class="views">
+                                    <b id="view-count-js">217</b> mil visualizações
+                                </span>
                                 <div class="video-actions">
                                     <button class="action-btn action-like">
-                                        <span>24 mil ameis</span>
+                                        <i class="fa-solid fa-heart"></i>
+                                        <b id="like-count-js">24</b> mil ameis
                                     </button>
                                     <button class="action-btn action-save">
-                                        </button>
+                                        <i class="fa-solid fa-bookmark"></i>
+                                    </button>
+                                    <button class="action-btn action-share">
+                                        <i class="fa-solid fa-share"></i>
+                                    </button>
                                 </div>
                             </div>
                         </section>
@@ -83,9 +92,7 @@
                             </div>
                             
                             <div class="comment-list">
-                                <div class="comment">
-                                    <p><strong>@Lucas:</strong> Deu super certo!</p>
-                                </div>
+                                <div class=class="comment-list" id="comment-list-js"></div>
                             </div>
                         </section>
                     </div>

@@ -62,11 +62,16 @@ button, input {font-family: 'Poppins', sans-serif;}
 }
 
 .sidebar-nav .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--brand-primary);
-    margin-bottom: 20px;
-    /* Adicionar ícone da panela aqui se desejar */
+    /* Alinha a logo (caso ela não ocupe 100%) */
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.sidebar-nav .logo img {
+    width: 100%; /* Faz a imagem ocupar o espaço do link */
+    max-width: 180px; /* Define um limite (ajuste esse valor) */
+    height: auto; /* Mantém a proporção */
 }
 
 .sidebar-nav .menu-title {
@@ -504,6 +509,19 @@ main {
     font-weight: 500;
 }
 
+/* Esconde a caixa de descrição por padrão */
+.video-full-description {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: var(--bg-light); /* Fundo cinza claro */
+    border-radius: 8px;
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 0.9rem;
+    white-space: pre-wrap; /* Preserva quebras de linha do JS */
+}
+
 .video-stats-actions {
     display: flex;
     justify-content: space-between;
@@ -647,6 +665,15 @@ main {
 
 .video-content-white-bg .action-btn:hover {background-color: var(--border-light);} /* Cinza um pouco mais escuro no hover */
 
+/* Garante que o ícone de bookmark (Salvar) seja adicionado */
+.video-content-white-bg .action-btn.action-save {
+    padding: 8px 12px; /* Ajuste para botão só com ícone */
+}
+
+/* Estilo para o novo botão de compartilhar */
+.video-content-white-bg .action-btn.action-share {
+    padding: 8px 12px; /* Ajuste para botão só com ícone */
+}
 
 /* Ajusta a seção de comentários */
 .video-page-layout .comments-section {color: var(--text-dark);} /* Garante que o texto seja escuro */

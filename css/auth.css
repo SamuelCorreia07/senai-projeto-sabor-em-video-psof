@@ -60,14 +60,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    /* Estilo do texto da logo (baseado no protótipo) */
-    color: var(--text-light);
-    font-size: 2.5rem;
-    font-weight: 700;
-    padding: 20px; /* Evita que o texto quebre em telas menores */
-    text-align: center;
-    /* A imagem da panela/play seria adicionada aqui via HTML/CSS */
+}
+
+.auth-brand-side img {
+    width: 80%; /* Ocupa 80% do container */
+    max-width: 350px; /* Define um limite (ajuste esse valor) */
+    height: auto; /* Mantém a proporção */
 }
 
 
