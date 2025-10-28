@@ -295,9 +295,7 @@ main {
     transition: transform 0.2s ease;
 }
 
-.recipe-card:hover {
-    transform: translateY(-5px);
-}
+.recipe-card:hover { transform: translateY(-5px);}
 
 .recipe-card img {
     width: 100%;

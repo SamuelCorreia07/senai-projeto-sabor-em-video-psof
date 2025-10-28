@@ -1,7 +1,7 @@
 // js/app.js
 
 // ==========================================================
-// 1. GUARDA DE AUTENTICAÇÃO (AUTH GUARD)
+// GUARDA DE AUTENTICAÇÃO (AUTH GUARD)
 // Este código roda IMEDIATAMENTE.
 // ==========================================================
 (function() {
@@ -18,7 +18,7 @@
 
 
 // ==========================================================
-// 2. BANCO DE DADOS FALSO (MOCK)
+// BANCO DE DADOS FALSO (MOCK)
 // (Para simular suas receitas)
 // ==========================================================
 const db_recipes = [
@@ -121,11 +121,11 @@ function shuffleArray(array) {
 }
 
 // ==========================================================
-// 3. LÓGICA DO APP (Roda após o DOM carregar)
+// LÓGICA DO APP (Roda após o DOM carregar)
 // ==========================================================
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 3.1. Exibição do Nome do Usuário ---
+    // --- Exibição do Nome do Usuário ---
     // (Esta parte roda em todas as páginas que incluem o app.js)
     
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // --- 3.2. Lógica do Catálogo (index.html) ---
+    // --- Lógica do Catálogo (index.html) ---
     // (Esta parte só roda se estivermos no index.html)
 
     if (document.body.classList.contains('page-catalogo')) { // <-- (Veja Passo 4)
@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${recipe.img}" alt="${recipe.title}">
                         <div class="card-info">
                             <h3>${recipe.title}</h3>
-                            <span class="likes">200</span>
                         </div>
                     </a>
                 `;
@@ -241,17 +240,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (chefList) {
             chefList.innerHTML = ''; // Limpa a lista
 
-            // 2. Itera sobre o banco de dados de chefs
+            // Itera sobre o banco de dados de chefs
             db_chefs.forEach(chef => {
                 
-                // 3. Encontra a primeira receita associada a este chef
+                // Encontra a primeira receita associada a este chef
                 const firstRecipe = db_recipes.find(recipe => recipe.chefId === chef.id);
                 
-                // 4. Define o link (href)
+                // Define o link (href)
                 // Se o chef tiver uma receita, linka para ela. Se não, linka para "#".
                 const link = firstRecipe ? `reproducao.html?id=${firstRecipe.id}` : '#';
                 
-                // 5. Cria o HTML do item da lista
+                // Cria o HTML do item da lista
                 const li = document.createElement('li');
                 li.innerHTML = `
                     <a href="${link}">
@@ -260,13 +259,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 `;
 
-                // 6. Adiciona o item à lista no HTML
+                // Adiciona o item à lista no HTML
                 chefList.appendChild(li);
             });
         }
     }
     
-    // --- 3.3. Lógica da Reprodução (reproducao.html) ---
+    // --- Lógica da Reprodução (reproducao.html) ---
     if (document.body.classList.contains('page-reproducao')) { 
         
         const urlParams = new URLSearchParams(window.location.search);
@@ -311,10 +310,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Usamos o recipe.chefId (ex: 3) para buscar no db_chefs
                 const chef = db_chefs.find(c => c.id === recipe.chefId);
                 
-                // 5. Encontra o container do chef no HTML
+                // Encontra o container do chef no HTML
                 const chefInfoBox = document.getElementById('chef-info-box');
 
-                // 6. Preenche o HTML do chef
+                // Preenche o HTML do chef
                 if (chef && chefInfoBox) {
                     chefInfoBox.innerHTML = `
                         <img src="${chef.img}" alt="${chef.name}" class="chef-avatar">
@@ -337,13 +336,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Atualiza Visualizações Aleatórias
                 const viewCountEl = document.getElementById('view-count-js');
                 if (viewCountEl) {
-                    viewCountEl.textContent = getRandomInt(10, 500); // Ex: 10k a 500k
+                    viewCountEl.textContent = getRandomInt(99, 500); // Ex: 99k a 500k
                 }
 
                 // Atualiza Likes Aleatórios
                 const likeCountEl = document.getElementById('like-count-js');
                 if (likeCountEl) {
-                    likeCountEl.textContent = getRandomInt(1, 99); // Ex: 1k a 99k
+                    likeCountEl.textContent = getRandomInt(1, 80); // Ex: 1k a 80k
                 }
 
                 // Lógica do "...mais" (Lorem Ipsum)
